@@ -1,0 +1,4 @@
+SELECT FirstName, AssetType, LastUpdatedOn
+FROM Actors
+INNER JOIN (SELECT ActorId, AssetType, LastUpdatedOn FROM DigitalAssets) as Tbl
+ON ActorId = Id;
